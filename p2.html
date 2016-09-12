@@ -4,10 +4,12 @@
         <title>Georgia Cities</title>
         <link href="style.css" rel="stylesheet" type="text/css">
         
+
+        
     </head>
 
     <body>
-    
+        <script src="functions.js"></script>
         <div class="all_content">
             <form>
         
@@ -18,18 +20,19 @@
                 </center>
                     
                     <label>First name</label>
-                    <input type="text" name="first name" style="margin-left:0.4em;"/>
+                    <input id="firstName" onblur="correctCase(this.id)" type="text" name="first name" style="margin-left:0.4em;"/>
                     <label>Last name</label>
-                    <input type="text" name="last name" />
+                    <input type="text" id="lastName" onblur="correctCase(this.id)" name="last name" />
                 
                     <label>Telephone</label>
                     <input type="text" name="telephone" style="width: 110px; margin-left:0.5em;"/>
                     <br>
                     
                     <label>City</label>
-                    <input id="cityinput" type="text" name="city" style="margin-left:4em;" />
+                    <input type="text" name="city" style="margin-left:4em;" />
                     <label>Zip code: </label>
-                    <select id="zipinput" name="zip code">
+                    <select name="zip code">
+                        <option>12345</option>
                     </select>
                     <br>
                     
@@ -41,8 +44,7 @@
             
             </form>
         </div>
-        <script src="scripts.js"></script>
-
+        
         
     </body>
     
