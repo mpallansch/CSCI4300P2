@@ -50,6 +50,7 @@
         }
 })();
 
+// Function for autocorrecting first and last name fields to correct format
 function correctCase(id) {
     var name = document.getElementById(id).value; 
     var temp = "";
@@ -58,7 +59,6 @@ function correctCase(id) {
     name = name.charAt(0).toUpperCase() + name.slice(1);
 
     console.log(name);
-    
     
     for(i=1;i< name.length;i = i + 1){
         if(name.charAt(i) == " "){
@@ -73,4 +73,18 @@ function correctCase(id) {
         }
     }
 document.getElementById(id).value = name;
+}
+
+// Function for ensuring correct telephune number input
+function phoneNum(){
+    var number = document.getElementById("number").value;
+    console.log(number);
+
+    if(/^\D+([0-9]{3})\D+([0-9]{3})\D+([0-9]{4})$/.test(number))  {  
+      return true;  
+    }  
+    else  {  
+        alert("Invalid number of digits/grouped improperly");  
+        return false;  
+    }
 }

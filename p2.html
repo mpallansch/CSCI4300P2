@@ -2,35 +2,42 @@
 <html>
     <head>
         <title>Georgia Cities</title>
+<!--        Line 6 references the style.css file to style the page-->
         <link href="style.css" rel="stylesheet" type="text/css">
-        
-
         
     </head>
 
+    
     <body>
         
         <div class="all_content">
             <form>
-        
                 
                 <p>
                     <center>
+                        <!--Prompt for user to enter info-->
                     <h4 style="margin-bottom:0px;">Please tell us who you are (Georgia residents only)</h4>
                 </center>
                     
                     <label>First name</label>
+<!--                    Line below also references correctCase function in scripts.js-->
                     <input id="firstName" onblur="correctCase(this.id)" type="text" name="first name" style="margin-left:0.4em;"/>
+                    
                     <label>Last name</label>
+<!--                    Line below also references correctCase function in scripts.js-->
                     <input type="text" id="lastName" onblur="correctCase(this.id)" name="last name" />
                 
                     <label>Telephone</label>
-                    <input type="text" name="telephone" style="width: 110px; margin-left:0.5em;"/>
+<!--                    Line below references phoneNum() function in scripts.js-->
+                    <input id="number" onblur="phoneNum()" type="text" name="telephone" style="width: 110px; margin-left:0.5em;"/>
                     <br>
                     
                     <label>City</label>
+<!--                    Line below references scripts.js file with id = "cityinput"-->
                     <input id ="cityinput" type="text" name="city" style="margin-left:4em;" />
+                    
                     <label>Zip code: </label>
+                    <!--Line below references scripts.js file with id = "zipinput"-->
                     <select id ="zipinput" name="zip code">
                         <option>12345</option>
                     </select>
@@ -44,6 +51,7 @@
             
             </form>
         </div>
+<!--        JavaScript functions used in this html file come from scripts.js-->
         <script src="scripts.js"></script>
         
     </body>
